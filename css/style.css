@@ -9,9 +9,13 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-size: 14px;
 	font-family: "Montserrat", Helvetica, sans-serif;
+	overflow-x: hidden;
 }
 a {
 	text-decoration: none;
@@ -703,7 +707,7 @@ footer.footer .wrapper .about,
 footer.footer .wrapper .links,
 footer.footer .wrapper .contacts {
 	margin: 0 10px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 footer.footer h3 {
 	color: #fff;
@@ -763,6 +767,39 @@ footer.footer .wrapper .contacts a {
 footer.footer .wrapper .contacts a:hover {
 	color: #FEA700;
 }
+footer.footer .wrap {
+	max-width: 1250px;
+	width: 100%;
+	margin: 0 auto;
+}
+footer.footer .wrap hr {
+	border-color: #666;
+}
+footer.footer .wrap .copyright-socialmedia {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+footer.footer .wrap .copyright-socialmedia ul li {
+	display: inline-block;
+}
+footer.footer .wrap .copyright-socialmedia ul li a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	background: #0008;
+	border-radius: 50%;
+	color: #fff;
+	transition: .3s;
+	margin-left: 5px;
+}
+footer.footer .wrap .copyright-socialmedia ul li a:hover {
+	background: #FEA700;
+}
 
 /* Media Queries */
 
@@ -792,5 +829,89 @@ footer.footer .wrapper .contacts a:hover {
 	section.skills .wrapper .title {
 		margin-bottom: 30px;
 		text-align: center;
+	}
+	footer.footer .wrapper {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	section.top-menu .wrapper {
+		flex-flow: column;
+		padding: 15px 0;
+	}
+	section.top-menu .wrapper .links-list {
+		margin-bottom: 20px;
+	}
+	header.header .top-title {
+		left: 50%;
+		text-align: center;
+		max-width: 700px;
+		width: 100%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	section.skills .transition .white {
+		display: none;
+	}
+	section.skills .transition .title {
+		width: 100%;
+	}
+	section.contact-form .wrapper .margin {
+		display: none;
+	}
+	section.skills .wrapper .skill-items {
+		flex-flow: wrap;
+		justify-content: space-around;
+	}
+	section.skills .wrapper .skill-items .item {
+		margin-bottom: 20px;
+	}
+	section.logo-contacts .contacts {
+		flex-flow: column;
+		padding: 30px 0 10px 0;
+	}
+	section.logo-contacts .contacts .item {
+		margin-bottom: 20px;
+		border: none;
+	}
+	section.top-menu .wrapper .links-list ul {
+		flex-flow: column;
+	}
+	section.top-menu .wrapper .links-list ul li {
+		margin-bottom: 5px;
+	}
+	body {
+		font-size: 12px;
+	}
+	section.about .wrapper {
+		flex-flow: column;
+	}
+	section.about-description .wrapper {
+		flex-flow: column;
+	}
+	section.about-description .wrapper .image .img {
+		width: 300px;
+		margin-bottom: 50px;
+	}
+	section.additional-contact .wrapper {
+		flex-flow: column;
+	}
+	section.additional-contact .wrapper h2 {
+		font-size: 2em;
+		text-align: center;
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	footer.footer .wrap .copyright-socialmedia {
+		flex-flow: column;
+	}
+	footer.footer .wrap .copyright-socialmedia span {
+		margin-bottom: 20px;
 	}
 }
